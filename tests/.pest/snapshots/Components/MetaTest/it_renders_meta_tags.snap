@@ -1,0 +1,8 @@
+<meta property="og:image" content="http://localhost/open-graph-image?template=example" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost/open-graph-image?template=example" />

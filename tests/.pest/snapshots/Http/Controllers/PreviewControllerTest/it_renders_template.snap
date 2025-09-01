@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Open Graph Image Generator</title>
+        <style>/* mocked tailwind css */</style>
+    </head>
+
+    <body>
+        <div class="min-w-screen min-h-screen flex items-center justify-center">
+        <div class="flex h-[630px] w-[1200px] items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700">
+            <div class="text-center text-white">
+                <h1 class="text-6xl font-bold">Custom Title</h1>
+                <p class="mt-4 text-2xl">Custom Description</p>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

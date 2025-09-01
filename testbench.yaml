@@ -1,0 +1,14 @@
+providers:
+  - HosmelQ\OpenGraphImage\OpenGraphImageServiceProvider
+
+workbench:
+  discovers:
+    config: true
+    views: true
+    web: true
+
+  install: false
+
+  sync:
+    - from: workbench/public/images
+      to: public/images

@@ -1,0 +1,36 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+$options = getopt('', ['input:', 'output:']);
+
+if (! isset($options['input']) || ! isset($options['output'])) {
+    fwrite(STDERR, "Error: Missing required arguments --input and --output\n");
+
+    exit(1);
+}
+
+if (! file_exists($options['input'])) {
+    fwrite(STDERR, "Error: Input file does not exist: {$options['input']}\n");
+
+    exit(1);
+}
+
+$inputContent = file_get_contents($options['input']);
+
+if (str_contains($inputContent, 'trigger-error')) {
+    fwrite(STDERR, "Tailwind CSS compilation failed: Simulated error for testing\n");
+
+    exit(1);
+}
+
+if (str_contains($inputContent, 'trigger-timeout')) {
+    sleep(35);
+
+    exit(1);
+}
+
+file_put_contents($options['output'], '/* Mock Tailwind CSS Output */');
+
+exit(0);
